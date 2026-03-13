@@ -1,9 +1,17 @@
 [
   {
+    "slug": "plume-landing",
+    "title": "Plume Creative — Landing Page",
+    "description": "Single-page brand site for Plume Creative. Dark theme, luxury positioning. Copy from KB (Jean Grey v1 pending swap-in).",
+    "status": "ready",
+    "date": "2026-03-12",
+    "type": "html"
+  },
+  {
     "slug": "sample-concept",
     "title": "Sample Concept",
     "description": "A sample preview to test the hub. Tap to view.",
-    "status": "ready",
+    "status": "archived",
     "date": "2026-03-12",
     "type": "html"
   }
