@@ -1,0 +1,10 @@
+[
+  {
+    "slug": "sample-concept",
+    "title": "Sample Concept",
+    "description": "A sample preview to test the hub. Tap to view.",
+    "status": "ready",
+    "date": "2026-03-12",
+    "type": "html"
+  }
+]

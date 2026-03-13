@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Concept</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 48px 24px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(212, 168, 83, 0.12) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #d4a853 0%, #8b6914 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin-bottom: 32px;
+      box-shadow: 0 0 40px rgba(212, 168, 83, 0.2);
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: #737373;
+      line-height: 1.6;
+      max-width: 320px;
+      margin-bottom: 40px;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: #d4a853;
+      color: #0a0a0a;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      letter-spacing: -0.01em;
+    }
+
+    .features {
+      padding: 64px 24px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .feature {
+      padding: 24px 0;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    .feature:last-child {
+      border-bottom: none;
+    }
+
+    .feature-icon {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .feature h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+
+    .feature p {
+      font-size: 13px;
+      color: #737373;
+      line-height: 1.5;
+    }
+
+    .footer {
+      padding: 32px 24px;
+      text-align: center;
+      border-top: 1px solid #1a1a1a;
+    }
+
+    .footer p {
+      font-size: 11px;
+      color: #525252;
+    }
+
+    .check {
+      color: #22c55e;
+      font-size: 13px;
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="logo">♟️</div>
+    <h1>Preview Hub<br>is Live</h1>
+    <p class="subtitle">
+      This is a sample preview. When Janet creates website concepts,
+      landing pages, or prototypes, they'll appear in the hub and
+      render right here -- full screen, on any device.
+    </p>
+    <button class="cta" onclick="alert('This is a sample -- real concepts will be interactive!')">
+      Try It Out
+    </button>
+    <div class="check">✓ Preview rendering correctly</div>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <div class="feature-icon">⚡</div>
+      <h3>Instant Previews</h3>
+      <p>Janet pushes a concept, you get a Telegram link. Tap it, see it live. No code, no downloads.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📱</div>
+      <h3>Mobile First</h3>
+      <p>Every preview is built to look great on your phone. Scroll, tap, interact -- just like the real thing.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🔄</div>
+      <h3>Real-Time Updates</h3>
+      <p>Give feedback via Telegram, Janet iterates, the preview updates. Same URL, fresh content.</p>
+    </div>
+  </section>
+
+  <div class="footer">
+    <p>Janet AI -- World of Grooves Studio</p>
+  </div>
+</body>
+</html>
