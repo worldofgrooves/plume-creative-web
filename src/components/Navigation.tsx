@@ -125,14 +125,14 @@ export default function Navigation() {
               onClick={() => setMobileOpen(false)}
             />
 
-            {/* Drawer -- slides in from left, covers full viewport height */}
+            {/* Drawer -- slides in from right, covers full viewport height */}
             <motion.div
               key="drawer"
-              initial={{ x: "-100%" }}
+              initial={{ x: "100%" }}
               animate={{ x: 0 }}
-              exit={{ x: "-100%" }}
+              exit={{ x: "100%" }}
               transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1.0] }}
-              className="md:hidden fixed top-0 left-0 bottom-0 w-[80vw] max-w-sm bg-bg z-[70] flex flex-col shadow-xl"
+              className="md:hidden fixed top-0 right-0 bottom-0 w-[80vw] max-w-sm bg-bg z-[70] flex flex-col shadow-xl"
             >
               {/* Drawer header */}
               <div className="flex items-center justify-between px-6 h-16 border-b border-border">
@@ -159,7 +159,7 @@ export default function Navigation() {
                 {navItems.map((item, i) => (
                   <motion.div
                     key={item.href}
-                    initial={{ opacity: 0, x: -12 }}
+                    initial={{ opacity: 0, x: 12 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.12 + i * 0.06, duration: 0.3, ease: [0.25, 0.1, 0.25, 1.0] }}
                   >
