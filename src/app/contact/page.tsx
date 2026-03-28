@@ -94,7 +94,7 @@ export default function ContactPage() {
               <h1 data-manuvi-id="contact-headline" data-manuvi-editable="both" className="font-display text-4xl md:text-5xl leading-tight tracking-tight mb-3">
                 Start a conversation.
               </h1>
-              <p className="text-text-secondary text-lg leading-relaxed mb-10 max-w-lg">
+              <p data-manuvi-id="contact-subtext" data-manuvi-editable="both" className="text-text-secondary text-lg leading-relaxed mb-10 max-w-lg">
                 Tell us about your brand and what you&apos;re looking to build.
                 We&apos;ll get back to you within one business day.
               </p>
@@ -206,6 +206,8 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={submitting}
+                    data-manuvi-id="contact-submit-btn"
+                    data-manuvi-editable="style"
                     className="px-8 py-3.5 bg-accent text-white text-sm font-medium tracking-wide rounded-sm hover:bg-accent-hover transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {submitting ? "Sending..." : "Send Message"}
@@ -230,7 +232,7 @@ export default function ContactPage() {
             {/* Sidebar */}
             <div className="animate-fade-in-up animation-delay-200">
               <div className="sticky top-28">
-                <div className="p-6 bg-bg-card border border-border rounded-sm mb-6">
+                <div data-manuvi-id="contact-studio-info" data-manuvi-editable="style" className="p-6 bg-bg-card border border-border rounded-sm mb-6">
                   <h3 className="text-text-muted text-xs tracking-widest uppercase mb-4">
                     Studio Info
                   </h3>
@@ -255,11 +257,11 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="p-6 bg-bg-card border border-border rounded-sm">
+                <div data-manuvi-id="contact-response-time" data-manuvi-editable="style" className="p-6 bg-bg-card border border-border rounded-sm">
                   <h3 className="text-text-muted text-xs tracking-widest uppercase mb-3">
                     Response Time
                   </h3>
-                  <p className="text-text-secondary text-sm leading-relaxed">
+                  <p data-manuvi-id="contact-response-text" data-manuvi-editable="both" className="text-text-secondary text-sm leading-relaxed">
                     We respond to all inquiries within one business day. For
                     urgent project needs, call the studio directly.
                   </p>

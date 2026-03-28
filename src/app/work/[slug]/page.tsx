@@ -53,7 +53,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
   return (
     <>
       {/* ── Full-Bleed Hero Image ── */}
-      <section className="relative overflow-hidden" style={{ height: "70vh" }}>
+      <section data-manuvi-id="casestudy-hero" data-manuvi-editable="style" className="relative overflow-hidden" style={{ height: "70vh" }}>
         <div className="absolute inset-0">
           <ImageReveal delay={0}>
             <PlaceholderImage
@@ -79,7 +79,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       </section>
 
       {/* ── Project Metadata ── */}
-      <section className="px-6 md:px-12 py-10 md:py-14">
+      <section data-manuvi-id="casestudy-metadata" data-manuvi-editable="style" className="px-6 md:px-12 py-10 md:py-14">
         <div className="max-w-4xl mx-auto">
           <StaggerContainer
             className="flex flex-wrap gap-x-8 gap-y-3 text-sm text-text-secondary"
@@ -105,7 +105,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       </section>
 
       {/* ── Art of Transformation Narrative Sections ── */}
-      <section className="px-6 md:px-12 pb-14 md:pb-20">
+      <section data-manuvi-id="casestudy-narrative" data-manuvi-editable="style" className="px-6 md:px-12 pb-14 md:pb-20">
         <div className="max-w-4xl mx-auto space-y-14">
           {sections.map((section, i) => (
             <div key={section.label}>
@@ -198,7 +198,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       </section>
 
       {/* ── Prev/Next Navigation ── */}
-      <section className="px-6 md:px-12 py-10 border-t border-border">
+      <section data-manuvi-id="casestudy-nav" data-manuvi-editable="style" className="px-6 md:px-12 py-10 border-t border-border">
         <div className="max-w-4xl mx-auto flex justify-between">
           {prev ? (
             <Link href={`/work/${prev.slug}`} className="group text-left">

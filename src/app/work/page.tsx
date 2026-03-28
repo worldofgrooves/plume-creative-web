@@ -34,7 +34,7 @@ export default function WorkPage() {
               </h1>
             </ClipReveal>
             <ClipReveal delay={0.25}>
-              <p className="text-text-secondary text-lg leading-relaxed">
+              <p data-manuvi-id="work-subtext" data-manuvi-editable="both" className="text-text-secondary text-lg leading-relaxed">
                 Brand identity, creative direction, and design systems for
                 experiential brands.
               </p>
