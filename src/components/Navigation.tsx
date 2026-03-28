@@ -39,6 +39,8 @@ export default function Navigation() {
   return (
     <>
       <nav
+        data-manuvi-id="nav-primary"
+        data-manuvi-editable="style"
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
           scrolled
             ? "bg-bg/95 backdrop-blur-md border-b border-border shadow-sm"
@@ -73,6 +75,8 @@ export default function Navigation() {
               ))}
               <Link
                 href="/start"
+                data-manuvi-id="nav-cta"
+                data-manuvi-editable="both"
                 className="inline-block px-5 py-2.5 bg-accent text-white text-sm font-medium tracking-wide rounded-sm hover:bg-accent-hover transition-colors duration-200"
               >
                 Start a Project

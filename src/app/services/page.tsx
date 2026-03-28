@@ -76,17 +76,17 @@ export default function ServicesPage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="px-6 md:px-12 py-16 md:py-28">
+      <section data-manuvi-id="services-hero" data-manuvi-editable="style" className="px-6 md:px-12 py-16 md:py-28">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
             <ClipReveal delay={0.1}>
-              <h1 className="font-display text-display-section leading-tight tracking-tight mb-5">
+              <h1 data-manuvi-id="services-headline" data-manuvi-editable="both" className="font-display text-display-section leading-tight tracking-tight mb-5">
                 Your brand is your most valuable asset. We make sure it performs
                 like one.
               </h1>
             </ClipReveal>
             <ClipReveal delay={0.3}>
-              <p className="text-text-secondary text-lg leading-relaxed max-w-xl">
+              <p data-manuvi-id="services-subtext" data-manuvi-editable="both" className="text-text-secondary text-lg leading-relaxed max-w-xl">
                 Plume Creative is a brand identity and creative direction studio
                 for ambitious companies that refuse to blend in -- from hospitality
                 and entertainment to tech, professional services, and consumer
@@ -98,7 +98,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── Three Service Pillars ── */}
-      <section className="px-6 md:px-12 pb-16 md:pb-24">
+      <section data-manuvi-id="services-pillars" data-manuvi-editable="style" className="px-6 md:px-12 pb-16 md:pb-24">
         <div className="max-w-7xl mx-auto">
           <StaggerContainer className="grid gap-6" staggerDelay={0.15}>
             {servicePillars.map((pillar) => (
@@ -145,7 +145,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── The Plume Process ── */}
-      <section className="px-6 md:px-12 py-16 md:py-24 bg-bg-elevated">
+      <section data-manuvi-id="services-process" data-manuvi-editable="style" className="px-6 md:px-12 py-16 md:py-24 bg-bg-elevated">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-2xl mb-12">
             <ClipReveal direction="left">
@@ -185,7 +185,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── Who This Is For ── */}
-      <section className="px-6 md:px-12 py-16 md:py-20">
+      <section data-manuvi-id="services-clients" data-manuvi-editable="style" className="px-6 md:px-12 py-16 md:py-20">
         <div className="max-w-3xl mx-auto text-center">
           <ClipReveal>
             <p className="text-text-muted text-xs tracking-widest uppercase mb-4">
@@ -193,7 +193,7 @@ export default function ServicesPage() {
             </p>
           </ClipReveal>
           <ClipReveal delay={0.15}>
-            <p className="font-display text-display-statement text-text-primary leading-relaxed">
+            <p data-manuvi-id="services-clients-statement" data-manuvi-editable="both" className="font-display text-display-statement text-text-primary leading-relaxed">
               We work best with business owners and marketing leaders who see brand
               as an investment, not an expense. If you&apos;re building something
               worth branding properly, we should talk.

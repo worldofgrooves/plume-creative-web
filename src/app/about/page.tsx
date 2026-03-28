@@ -42,12 +42,12 @@ export default function AboutPage() {
   return (
     <>
       {/* ── Hero: Portrait + Headline ── */}
-      <section className="px-6 md:px-12 py-16 md:py-28">
+      <section data-manuvi-id="about-hero" data-manuvi-editable="style" className="px-6 md:px-12 py-16 md:py-28">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             <div>
               <ClipReveal delay={0.1}>
-                <h1 className="font-display text-display-section leading-tight tracking-tight mb-5">
+                <h1 data-manuvi-id="about-headline" data-manuvi-editable="both" className="font-display text-display-section leading-tight tracking-tight mb-5">
                   Strategic design with an artist&apos;s instinct.
                 </h1>
               </ClipReveal>
@@ -71,7 +71,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── The Studio ── */}
-      <section className="px-6 md:px-12 py-14 md:py-20 bg-bg-elevated">
+      <section data-manuvi-id="about-studio" data-manuvi-editable="style" className="px-6 md:px-12 py-14 md:py-20 bg-bg-elevated">
         <div className="max-w-3xl mx-auto">
           <ClipReveal direction="left">
             <h2 className="text-accent text-xs tracking-widest uppercase mb-6">
@@ -94,7 +94,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── The Creative Director ── */}
-      <section className="px-6 md:px-12 py-14 md:py-20">
+      <section data-manuvi-id="about-director" data-manuvi-editable="style" className="px-6 md:px-12 py-14 md:py-20">
         <div className="max-w-3xl mx-auto">
           <ClipReveal direction="left">
             <h2 className="text-accent text-xs tracking-widest uppercase mb-6">
@@ -118,10 +118,10 @@ export default function AboutPage() {
       </section>
 
       {/* ── Creative Network ── */}
-      <section className="px-6 md:px-12 py-14 md:py-20 bg-bg-elevated">
+      <section data-manuvi-id="about-network" data-manuvi-editable="style" className="px-6 md:px-12 py-14 md:py-20 bg-bg-elevated">
         <div className="max-w-3xl mx-auto text-center">
           <ClipReveal>
-            <h2 className="font-display text-display-statement text-text-primary mb-4">
+            <h2 data-manuvi-id="about-network-headline" data-manuvi-editable="both" className="font-display text-display-statement text-text-primary mb-4">
               Small by design. Big when it counts.
             </h2>
           </ClipReveal>
@@ -138,7 +138,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── What We Believe ── */}
-      <section className="px-6 md:px-12 py-14 md:py-20">
+      <section data-manuvi-id="about-beliefs" data-manuvi-editable="style" className="px-6 md:px-12 py-14 md:py-20">
         <div className="max-w-7xl mx-auto">
           <ClipReveal direction="left">
             <h2 className="text-accent text-xs tracking-widest uppercase mb-10">
@@ -161,7 +161,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Credentials ── */}
-      <section className="px-6 md:px-12 py-14 md:py-20 bg-bg-elevated">
+      <section data-manuvi-id="about-credentials" data-manuvi-editable="style" className="px-6 md:px-12 py-14 md:py-20 bg-bg-elevated">
         <div className="max-w-3xl mx-auto">
           <ClipReveal direction="left">
             <h2 className="text-accent text-xs tracking-widest uppercase mb-8">

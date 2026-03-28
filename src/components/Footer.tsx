@@ -3,7 +3,7 @@ import PlumeIcon from "@/components/PlumeIcon";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-bg-elevated">
+    <footer data-manuvi-id="footer-main" data-manuvi-editable="style" className="border-t border-border bg-bg-elevated">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16">
           {/* Brand */}
@@ -76,6 +76,8 @@ export default function Footer() {
             <div className="flex items-center gap-4">
               <Link
                 href="/start"
+                data-manuvi-id="footer-cta"
+                data-manuvi-editable="both"
                 className="inline-block px-6 py-2.5 bg-accent text-white text-sm font-medium tracking-wide rounded-sm hover:bg-accent-hover transition-colors duration-200"
               >
                 Start a Project

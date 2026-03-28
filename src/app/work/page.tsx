@@ -25,11 +25,11 @@ export default function WorkPage() {
   return (
     <>
       {/* Hero */}
-      <section className="px-6 md:px-12 py-16 md:py-24">
+      <section data-manuvi-id="work-hero" data-manuvi-editable="style" className="px-6 md:px-12 py-16 md:py-24">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-2xl">
             <ClipReveal delay={0.1}>
-              <h1 className="font-display text-display-section leading-tight tracking-tight mb-5">
+              <h1 data-manuvi-id="work-headline" data-manuvi-editable="both" className="font-display text-display-section leading-tight tracking-tight mb-5">
                 Selected Work
               </h1>
             </ClipReveal>
@@ -44,7 +44,7 @@ export default function WorkPage() {
       </section>
 
       {/* Filter + Grid */}
-      <section className="px-6 md:px-12 pb-16 md:pb-24">
+      <section data-manuvi-id="work-grid" data-manuvi-editable="style" className="px-6 md:px-12 pb-16 md:pb-24">
         <div className="max-w-7xl mx-auto">
 
           {/* Filter bar */}

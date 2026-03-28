@@ -86,12 +86,12 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="px-6 md:px-12 py-16 md:py-28">
+      <section data-manuvi-id="contact-section" data-manuvi-editable="style" className="px-6 md:px-12 py-16 md:py-28">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-[1fr_400px] gap-12 md:gap-20">
             {/* Form */}
             <div className="animate-fade-in-up">
-              <h1 className="font-display text-4xl md:text-5xl leading-tight tracking-tight mb-3">
+              <h1 data-manuvi-id="contact-headline" data-manuvi-editable="both" className="font-display text-4xl md:text-5xl leading-tight tracking-tight mb-3">
                 Start a conversation.
               </h1>
               <p className="text-text-secondary text-lg leading-relaxed mb-10 max-w-lg">
