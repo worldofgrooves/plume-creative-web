@@ -258,7 +258,7 @@ export function ManuviProvider({
       })
 
       const rect = target.getBoundingClientRect()
-      const editableAttr = target.getAttribute(MANUVI_DATA_EDITABLE)
+      const editableType = resolveEditableType(target)
       const parentChain = getParentChain(target as HTMLElement)
 
       // Gather content info
@@ -287,7 +287,7 @@ export function ManuviProvider({
           height: rect.height,
         },
         editableProperties: STYLE_PROPERTIES,
-        editableType: (editableAttr as 'style' | 'content' | 'both') || 'style',
+        editableType,
         locked: false,
         parentChain,
         content: contentInfo,
@@ -323,6 +323,36 @@ export function ManuviProvider({
 }
 
 // ============================================================
+// Editable Type Inference
+// ============================================================
+
+const CONTENT_EDITABLE_TAGS = new Set([
+  'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+  'p', 'span', 'a', 'button',
+  'li', 'dt', 'dd',
+  'label', 'figcaption', 'caption', 'summary',
+  'blockquote', 'q', 'cite',
+  'td', 'th',
+])
+
+const MEDIA_CONTENT_TAGS = new Set(['img', 'video', 'audio'])
+
+function inferEditableType(element: Element): 'style' | 'content' | 'both' {
+  const tagName = element.tagName.toLowerCase()
+  if (CONTENT_EDITABLE_TAGS.has(tagName)) return 'both'
+  if (MEDIA_CONTENT_TAGS.has(tagName)) return 'content'
+  return 'style'
+}
+
+function resolveEditableType(element: Element): 'style' | 'content' | 'both' {
+  const explicit = element.getAttribute(MANUVI_DATA_EDITABLE)
+  if (explicit === 'content' || explicit === 'both' || explicit === 'style') {
+    return explicit
+  }
+  return inferEditableType(element)
+}
+
+// ============================================================
 // Helper Functions
 // ============================================================
 
@@ -339,13 +369,17 @@ function scanElements(): RegisteredElement[] {
     const id = node.getAttribute(MANUVI_DATA_ID)
     if (!id) return
 
-    const editableAttr = node.getAttribute(MANUVI_DATA_EDITABLE)
+    const editableType = resolveEditableType(node)
     const locked = node.getAttribute(MANUVI_DATA_LOCKED) === 'true'
+
+    if (!node.getAttribute(MANUVI_DATA_EDITABLE)) {
+      ;(node as HTMLElement).setAttribute(MANUVI_DATA_EDITABLE, editableType)
+    }
 
     elements.push({
       id,
       componentName: id,
-      editableType: (editableAttr as 'style' | 'content') || 'style',
+      editableType,
       locked,
       boundingBox: node.getBoundingClientRect(),
     })
