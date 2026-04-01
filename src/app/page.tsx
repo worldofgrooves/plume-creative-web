@@ -3,6 +3,7 @@ import { ClipReveal } from "@/components/motion/ClipReveal";
 import { PinnedScene } from "@/components/motion/PinnedScene";
 import { StaggerContainer, StaggerChild } from "@/components/motion/StaggerContainer";
 import { WorkScrollCard } from "@/components/motion/WorkScrollCard";
+import { ServicesAccordion } from "@/components/ServicesAccordion";
 import { caseStudies } from "@/data/projects";
 
 const featured = caseStudies.slice(0, 5);
@@ -145,56 +146,71 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Section 4: Testimonials ── */}
-      <section data-manuvi-id="plume-testimonials" data-manuvi-editable="style" className="px-6 md:px-12 py-16 md:py-24">
-        <div className="max-w-4xl mx-auto">
-          <ClipReveal direction="left">
-            <p className="text-accent text-xs tracking-widest uppercase mb-10 text-center">
-              What They Say
-            </p>
-          </ClipReveal>
-          <div className="space-y-10">
-            {[
-              {
-                quote:
-                  "Denver is a creative force. His thoughtful approach to creative development, collaboration and team building are evidenced by his body of work and lasting relationships. He has the unique ability to apply those methods of thinking outside their respective disciplines to yield innovative creative solutions.",
-                name: "Alexandra Smith",
-                title: "Design Director, MGM Resorts International",
-              },
-              {
-                quote:
-                  "He is an artistic talent that will add to the creativity of any job thrown his way. He has a thirst for this creative world, and is always asking questions or coming up with solutions to push visual and concept driven boundaries.",
-                name: "Steve Averitt",
-                title: "Owner & Creative Director, Averitt Creative",
-              },
-              {
-                quote:
-                  "Denver is not only one of the most creative people I\u2019ve worked with, he is also one of the most authentic and enthusiastic creatives in the industry. His versatility is evident when you see his art, listen to his music, browse his portfolio or just engage in a conversation.",
-                name: "EJ Luera",
-                title: "Owner, Feature Sneaker Boutique",
-              },
-            ].map((testimonial, i) => (
-              <ClipReveal key={testimonial.name} delay={i * 0.1}>
-                <blockquote className="border-l-2 border-accent/30 pl-6">
-                  <p className="text-text-secondary text-lg leading-relaxed italic mb-4">
-                    &ldquo;{testimonial.quote}&rdquo;
-                  </p>
-                  <footer>
-                    <p className="text-text-primary text-sm font-medium">
-                      {testimonial.name}
-                    </p>
-                    <p className="text-text-muted text-xs">
-                      {testimonial.title}
-                    </p>
-                  </footer>
-                </blockquote>
+      {/* ── Section 4: Services Accordion ── */}
+      <section data-manuvi-id="plume-services-accordion" data-manuvi-editable="style" className="px-6 md:px-12 py-16 md:py-24">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex justify-between items-end mb-10">
+            <div>
+              <ClipReveal direction="left">
+                <p className="text-accent text-xs tracking-widest uppercase mb-3">
+                  Capabilities
+                </p>
               </ClipReveal>
-            ))}
+              <ClipReveal delay={0.1}>
+                <h2 className="font-display text-display-section">Services</h2>
+              </ClipReveal>
+            </div>
+            <ClipReveal delay={0.2}>
+              <span className="text-text-muted text-xs tracking-widest uppercase hidden md:block">
+                07
+              </span>
+            </ClipReveal>
           </div>
+          <ClipReveal delay={0.15} duration={0.6}>
+            <div className="border-t border-border">
+              <ServicesAccordion />
+            </div>
+          </ClipReveal>
         </div>
       </section>
 
-      {/* ── Section 5: Industry Tags (stagger fade via StaggerChild) ── */}
+      {/* ── Section 5: Trusted By ── */}
+      <section data-manuvi-id="plume-trusted-by" data-manuvi-editable="style" className="px-6 md:px-12 py-16 md:py-24">
+        <div className="max-w-5xl mx-auto">
+          <ClipReveal direction="left">
+            <p className="text-accent text-xs tracking-widest uppercase mb-12 text-center">
+              Trusted By
+            </p>
+          </ClipReveal>
+          <StaggerContainer
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8 gap-x-6 text-center"
+            staggerDelay={0.06}
+          >
+            {[
+              "MGM Resorts International",
+              "Wynn Las Vegas",
+              "Sunseeker Resort",
+              "Ocean Resort",
+              "Matices",
+              "Full House Resort",
+              "Paradise Candy",
+              "The Den",
+              "Vida Optima",
+              "Top Secret Recipes",
+              "Zhen Bang Noodle",
+              "Sugar & Salt",
+            ].map((client) => (
+              <StaggerChild key={client}>
+                <span className="text-text-primary text-sm tracking-wide font-medium">
+                  {client}
+                </span>
+              </StaggerChild>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* ── Section 6: Industry Tags (stagger fade via StaggerChild) ── */}
       <section data-manuvi-id="plume-industries" data-manuvi-editable="style" className="px-6 md:px-12 py-12 md:py-16">
         <div className="max-w-7xl mx-auto">
           <StaggerContainer
